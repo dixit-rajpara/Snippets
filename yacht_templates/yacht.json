@@ -1,0 +1,26 @@
+[
+  {
+    "type": 1,
+    "title": "Jupyter Minimal Notebook",
+    "name": "jupyter-notebook-min",
+    "description": "The Jupyter Notebook is the original web application for creating and sharing computational documents. It offers a simple, streamlined, document-centric experience.",
+    "logo": "https://jupyter.org/assets/homepage/main-logo.svg",
+    "image": "jupyter/minimal-notebook:latest",
+    "categories": [
+      "Programming"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      {
+        "WebUI": "8888:8888/tcp"
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/home/jovyan/work",
+        "bind": "!data/jupyter"
+      }
+    ]
+  }
+]
